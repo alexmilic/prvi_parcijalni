@@ -1,0 +1,309 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+body {
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrap {
+  display: flex;
+}
+
+aside {
+  border-right: 2px solid #ffb4ac;
+  max-width: 20%;
+  padding: 15px;
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  max-width: 80%;
+  padding: 10px;
+  width: 100%;
+}
+
+.top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  max-width: 50px;
+}
+
+.logo-text {
+  font-family: "Roboto", sans-serif;
+  color: #679186;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.burger-icon {
+  max-width: 30px;
+  height: 30px;
+  width: 100%;
+}
+
+.nav {
+  margin: 30px 0 0;
+  padding: 0;
+}
+.nav li {
+  align-items: center;
+  border-bottom: 1px solid #679186;
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+.nav li a {
+  color: #264e70;
+  font-size: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.nav img {
+  max-width: 30px;
+  width: 100%;
+}
+.nav + span {
+  color: #264e70;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+}
+
+.extra-nav {
+  margin-top: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+header input {
+  border-radius: 5px;
+  border-color: #ffebd3;
+  margin-left: 5px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+.user-info img {
+  margin-left: 20px;
+  max-width: 30px;
+  width: 100%;
+}
+.user-info .user-info-text {
+  display: block;
+  color: #264e70;
+}
+.user-info .username {
+  font-size: 18px;
+}
+.user-info .email {
+  font-size: 16px;
+}
+
+.messages {
+  border: 2px solid #264e70;
+  border-radius: 5px;
+  min-height: 90vh;
+}
+
+.toolbar {
+  border-bottom: 2px solid #264e70;
+  margin: 0 10px;
+  padding: 10px 0;
+}
+.toolbar ul {
+  display: flex;
+  flex-direction: row;
+}
+.toolbar li {
+  align-items: center;
+  display: flex;
+  margin: 0 10px;
+}
+.toolbar li img {
+  max-width: 30px;
+}
+.toolbar li span {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.inbox {
+  padding: 0 10px;
+}
+.inbox li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+.inbox li:hover .additional-message {
+  display: block;
+}
+.inbox .message-info {
+  align-items: center;
+  background-color: #016393;
+  border: 1px solid #ffb4ac;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+.inbox .subject {
+  align-items: center;
+  display: flex;
+}
+.inbox .subject .sender {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #264e70;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+.inbox .subject .sender span {
+  color: #ffb4ac;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+.inbox .subject p {
+  color: #ffebd3;
+  margin-left: 10px;
+}
+.inbox .time {
+  color: #ffebd3;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.inbox .additional-message {
+  background-color: #016393;
+  color: #ffebd3;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: none;
+  transition: 1s ease;
+}
+.inbox .additional-message:hover {
+  transform: scale(1.2);
+  background-color: #679186;
+}
+
+/*# sourceMappingURL=style.css.map */
