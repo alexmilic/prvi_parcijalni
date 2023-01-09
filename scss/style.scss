@@ -68,7 +68,7 @@ aside {
     padding-left: 5px;
     a {
       color: $blue;
-      font-size: 20px;
+      font-size: 18px;
       margin-left: 20px;
       text-decoration: none;
     }
@@ -83,11 +83,17 @@ aside {
     font-size: 20px;
     font-weight: bold;
     margin: 40px 0 20px;
+    @include tablet {
+      @include hide;
+    }
   }
 }
 
 .extra-nav  {
   margin-top: 0;
+  @include tablet {
+    @include hide;
+  }
 }
 
 header {
@@ -159,9 +165,11 @@ header {
   li {
     list-style-type: none;
     margin: 10px 0; 
-    &:hover {
-      .additional-message {
-        display: block; 
+    @include desktop {
+      &:hover {
+        .additional-message {
+          display: block; 
+        }
       }
     }
   };
@@ -202,6 +210,9 @@ header {
     color: $beige;
     font-size: 18px;
     margin-left: 10px;
+    @include tablet {
+      font-size: 16px;
+    }
   }
   .additional-message {
     background-color: $bg-blue;
@@ -212,9 +223,11 @@ header {
     margin: 0 auto;
     display: none;
     transition: 1s ease;
-    &:hover {
-      transform: scale(1.2);
-      background-color: $olive;
+    @include desktop {
+      &:hover {
+        transform: scale(1.2);
+        background-color: $olive;
+      }
     }
   }
 }

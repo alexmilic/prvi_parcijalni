@@ -2,16 +2,20 @@
   @media screen and (min-width: 1200px) {
     @content;
   }
-}
+};
 
 @mixin tablet {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1024px) {
     @content;
   }
-}
+};
 
 @mixin mobile {
   @media screen and (max-width: 768px) {
     @content;
   }
+};
+
+@mixin hide {
+  display: none;
 }

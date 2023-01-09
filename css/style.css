@@ -161,7 +161,7 @@ aside {
 }
 .nav li a {
   color: #264e70;
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 20px;
   text-decoration: none;
 }
@@ -176,9 +176,19 @@ aside {
   font-weight: bold;
   margin: 40px 0 20px;
 }
+@media screen and (max-width: 1024px) {
+  .nav + span {
+    display: none;
+  }
+}
 
 .extra-nav {
   margin-top: 0;
+}
+@media screen and (max-width: 1024px) {
+  .extra-nav {
+    display: none;
+  }
 }
 
 header {
@@ -250,8 +260,10 @@ header input {
   list-style-type: none;
   margin: 10px 0;
 }
-.inbox li:hover .additional-message {
-  display: block;
+@media screen and (min-width: 1200px) {
+  .inbox li:hover .additional-message {
+    display: block;
+  }
 }
 .inbox .message-info {
   align-items: center;
@@ -291,6 +303,11 @@ header input {
   font-size: 18px;
   margin-left: 10px;
 }
+@media screen and (max-width: 1024px) {
+  .inbox .time {
+    font-size: 16px;
+  }
+}
 .inbox .additional-message {
   background-color: #016393;
   color: #ffebd3;
@@ -301,9 +318,11 @@ header input {
   display: none;
   transition: 1s ease;
 }
-.inbox .additional-message:hover {
-  transform: scale(1.2);
-  background-color: #679186;
+@media screen and (min-width: 1200px) {
+  .inbox .additional-message:hover {
+    transform: scale(1.2);
+    background-color: #679186;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
