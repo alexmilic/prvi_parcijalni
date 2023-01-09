@@ -19,12 +19,23 @@ aside {
   padding: 15px;
   width: 100%;
   height: 100vh;
+  @include mobile {
+    @include hide;
+  }
 }
 
 .content {
-  max-width: 80%;
   padding: 10px;
   width: 100%;
+  @include desktop {
+    max-width: 80%;
+  }
+  @include tablet {
+    max-width: 80%;
+  }
+  @include mobile {
+    max-width: 100%;
+  }
 }
 
 .top {
@@ -106,6 +117,21 @@ header {
     margin-left: 5px;
     max-width: 350px;
     width: 100%;
+    @include mobile {
+      max-width: 70%;
+    }
+  }
+  .burger-icon {
+    @include hide;
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.user-info-wrap {
+  @include mobile {
+    @include hide;
   }
 }
 
@@ -128,6 +154,11 @@ header {
   .email {
     font-size: 16px;
   }
+  @include mobile {
+    img {
+      margin-left: 0;
+    }
+  }
 }
 
 
@@ -141,7 +172,6 @@ header {
 .toolbar {
   border-bottom: 2px solid $blue;
   margin: 0 10px;
-  padding: 10px 0;
   ul {
     display: flex;
     flex-direction: row;
@@ -151,11 +181,42 @@ header {
     display: flex;
     margin: 0 10px;
     img {
+      transition: 2s linear;
       max-width: 30px;
     }
     span {
+      color: $blue;
       margin-left: 10px;
       vertical-align: middle;
+      
+    }
+  }
+  @include desktop {
+    padding: 10px 0;
+  }
+  @include tablet {
+    padding: 8px 0;
+    span {
+      font-size: 15px;
+    }
+  }
+  @include mobile {
+    padding: 5px 0;
+    ul {
+      justify-content: space-between;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    li {
+      &:hover {
+        img {
+          background-color: $olive;
+          transform: scale(1.2) rotate(360deg) translateX(30px);
+        }
+      }
+      span {
+        @include hide;
+      }
     }
   }
 }
@@ -165,19 +226,17 @@ header {
   li {
     list-style-type: none;
     margin: 10px 0; 
-    @include desktop {
-      &:hover {
-        .additional-message {
-          display: block; 
-        }
+    &:hover {
+      .additional-message {
+        display: block; 
       }
     }
   };
   .message-info {
     align-items: center;
     background-color: $bg-blue;
-    border: 1px solid $rose;
-    border-radius: 5px;
+    border: 3px solid $rose;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     padding: 10px 15px;
@@ -223,11 +282,9 @@ header {
     margin: 0 auto;
     display: none;
     transition: 1s ease;
-    @include desktop {
-      &:hover {
-        transform: scale(1.2);
-        background-color: $olive;
-      }
+    &:hover {
+      transform: scale(1.2);
+      background-color: $olive;
     }
   }
 }
